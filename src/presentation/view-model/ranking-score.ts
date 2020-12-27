@@ -1,19 +1,19 @@
-import { RankingScore } from '@/domain/entities'
+import { RankingScore } from "@/domain/entities"
 
-export class RankingScoreViewModel {
+export class  RankingScoreViewModel {
   player: Player
   score: number
   matchDate: string
   heroes: Hero[]
 
-  static map (entity: RankingScore): RankingScoreViewModel {
+  static map(entity: RankingScore): RankingScoreViewModel {
     return {
       ...entity,
       matchDate: entity.matchDate.toISOString()
     }
   }
 
-  static mapCollection (entities: RankingScore[]): RankingScoreViewModel[] {
+  static mapCollection(entities: RankingScore[]): RankingScoreViewModel[] {
     return entities.map(entity => RankingScoreViewModel.map(entity))
   }
 }

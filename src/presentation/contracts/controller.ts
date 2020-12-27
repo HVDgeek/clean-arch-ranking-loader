@@ -1,5 +1,5 @@
-import { HttpResponse } from '@/presentation/contracts'
+import { HttpResponse } from "@/presentation/contracts";
 
-export interface Controller {
+export interface Controller  {
   handle: () => Promise<HttpResponse>
 }
